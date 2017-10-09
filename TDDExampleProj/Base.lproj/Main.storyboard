@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make Math Happen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6P-8p-eZf">
+                                <rect key="frame" x="113" y="35" width="149" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XyZ-2M-RV0">
+                                <rect key="frame" x="16" y="323" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8aD-6y-Pf9">
+                                <rect key="frame" x="163" y="96.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="makeMathHappenDidChangeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="MwE-3u-HCB"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yii-C1-XSe">
+                                <rect key="frame" x="163" y="490" width="51" height="31"/>
+                                <connections>
+                                    <action selector="meaningOfLifeDidChangeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="4rz-D1-kAx"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Meaning of Life" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjR-vv-hQO">
+                                <rect key="frame" x="113" y="450" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AfJ-11-N39">
+                                <rect key="frame" x="144" y="163.5" width="87" height="99"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59602171989999997" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="Idk-hP-Ugi"/>
+                                    <constraint firstAttribute="width" constant="87" id="W5A-jD-1TS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AfJ-11-N39" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1xn-xt-li7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Yii-C1-XSe" secondAttribute="bottom" constant="146" id="Cu4-4Z-uGn"/>
+                            <constraint firstItem="r6P-8p-eZf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="FmP-Jg-G9v"/>
+                            <constraint firstItem="8aD-6y-Pf9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Mrc-V1-Ov8"/>
+                            <constraint firstItem="Yii-C1-XSe" firstAttribute="top" secondItem="KjR-vv-hQO" secondAttribute="bottom" constant="19" id="OFX-CS-yQ1"/>
+                            <constraint firstItem="AfJ-11-N39" firstAttribute="top" secondItem="8aD-6y-Pf9" secondAttribute="bottom" constant="36" id="WLH-3L-IUo"/>
+                            <constraint firstItem="KjR-vv-hQO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dDp-0a-xGp"/>
+                            <constraint firstItem="8aD-6y-Pf9" firstAttribute="top" secondItem="r6P-8p-eZf" secondAttribute="bottom" constant="41" id="hak-kq-N0w"/>
+                            <constraint firstItem="Yii-C1-XSe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="snf-mA-1HZ"/>
+                            <constraint firstItem="r6P-8p-eZf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vIA-0K-QGR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="makeMathHappenSwitch" destination="8aD-6y-Pf9" id="J3a-Cs-gBV"/>
+                        <outlet property="meaningOfLifeSwitch" destination="Yii-C1-XSe" id="gQd-ln-aFE"/>
+                        <outlet property="resultLabel" destination="XyZ-2M-RV0" id="vGE-Hi-Ulk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="129.98500749625188"/>
+        </scene>
+    </scenes>
+</document>
