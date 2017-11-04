@@ -12,4 +12,5 @@
 
 
 -(NSNumber *)sumArray:(NSArray *)array;
+-(NSString *)doNoMath;
 @end

@@ -49,7 +49,7 @@
         }
         self.resultLabel.text = [NSString stringWithFormat: @"%@", [self.mathHelper sumArray:self.mathArray.copy]];
     } else {
-        self.resultLabel.text = @"No Math";
+        self.resultLabel.text = [self.mathHelper doNoMath];
     }
 }
 

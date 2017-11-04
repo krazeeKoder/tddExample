@@ -22,4 +22,8 @@
     return @(total);
 }
 
+-(NSString *)doNoMath {
+    return @"No Math";
+}
+
 @end
