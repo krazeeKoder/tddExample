@@ -19,7 +19,9 @@ SPEC_BEGIN(ViewControllerSpec)
 
 describe(@"ViewController", ^{
     __block ViewController *subject;
+
     
+/// SETUP ///
     beforeEach(^{
         UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -30,55 +32,62 @@ describe(@"ViewController", ^{
     });
     
     context(@"When make math happen switch is flipped", ^{
-        context(@"When meaning of life switch is off", ^{
-            beforeEach(^{
-                UISwitch *fakeSwitch = nice_fake_for([UISwitch class]);
-                subject.mathArray = @[@9,@3].mutableCopy;
-                fakeSwitch stub_method(@selector(isOn)).and_return(true);
-                [subject makeMathHappenDidChangeValue:fakeSwitch];
-            });
-
-            it(@"should should set result text to 12", ^{
-                subject.resultLabel.text should equal(@"12");
-            });
-        });
         
-        context(@"When meaning of life switch is on", ^{
-            beforeEach(^{
-                spy_on(subject.mathHelper);
-                UISwitch *fakeSwitch = nice_fake_for([UISwitch class]);
-                subject.mathArray = @[@9,@3].mutableCopy;
-                fakeSwitch stub_method(@selector(isOn)).and_return(true);
-                [subject.meaningOfLifeSwitch setOn:true];
-                [subject makeMathHappenDidChangeValue:fakeSwitch];
-            });
-            
-            it(@"should should set result text to 42", ^{
-                subject.resultLabel.text should equal(@"42");
-            });
-            
-            it(@"should not call the do no math method", ^{
-                subject.mathHelper should_not have_received(@selector(doNoMath));
-            });
-        });
+////// FOURTH EXERCISE, UNCOMMENT AND CODE THE IMPLEMENTATION ///////
+
+//        context(@"When meaning of life switch is off", ^{
+//            beforeEach(^{
+//                UISwitch *fakeSwitch = nice_fake_for([UISwitch class]);
+//                subject.mathArray = @[@9,@3].mutableCopy;
+//                fakeSwitch stub_method(@selector(isOn)).and_return(true);
+//                [subject makeMathHappenDidChangeValue:fakeSwitch];
+//            });
+//
+//            it(@"should should set result text to 12", ^{
+//                subject.resultLabel.text should equal(@"12");
+//            });
+//        });
+        
+////// FIFTH EXERCISE, UNCOMMENT AND CODE THE IMPLEMENTATION ///////
+
+//        context(@"When meaning of life switch is on", ^{
+//            beforeEach(^{
+//                spy_on(subject.mathHelper);
+//                UISwitch *fakeSwitch = nice_fake_for([UISwitch class]);
+//                subject.mathArray = @[@9,@3].mutableCopy;
+//                fakeSwitch stub_method(@selector(isOn)).and_return(true);
+//                [subject.meaningOfLifeSwitch setOn:true];
+//                [subject makeMathHappenDidChangeValue:fakeSwitch];
+//            });
+//
+//            it(@"should should set result text to 42", ^{
+//                subject.resultLabel.text should equal(@"42");
+//            });
+//
+//            it(@"should not call the do no math method", ^{
+//                subject.mathHelper should_not have_received(@selector(doNoMath));
+//            });
+//        });
     });
     
-    context(@"When math switch is off", ^{
-        beforeEach(^{
-            spy_on(subject.mathHelper);
-            UISwitch *fakeSwitch = nice_fake_for([UISwitch class]);
-            subject.mathArray = @[@9,@3].mutableCopy;
-            fakeSwitch stub_method(@selector(isOn)).and_return(false);
-            [subject makeMathHappenDidChangeValue:fakeSwitch];
-        });
-        it(@"should not do math", ^{
-            subject.resultLabel.text should equal(@"No Math");
-        });
-        
-        it(@"should call the do no math method on the math helper", ^{
-            subject.mathHelper should have_received(@selector(doNoMath));
-        });
-    });
+////// THIRD EXERCISE, UNCOMMENT AND CODE THE IMPLEMENTATION ///////
+    
+//    context(@"When math switch is off", ^{
+//        beforeEach(^{
+//            spy_on(subject.mathHelper);
+//            UISwitch *fakeSwitch = nice_fake_for([UISwitch class]);
+//            subject.mathArray = @[@9,@3].mutableCopy;
+//            fakeSwitch stub_method(@selector(isOn)).and_return(false);
+//            [subject makeMathHappenDidChangeValue:fakeSwitch];
+//        });
+//        it(@"should not do math", ^{
+//            subject.resultLabel.text should equal(@"No Math");
+//        });
+//
+//        it(@"should call the do no math method on the math helper", ^{
+//            subject.mathHelper should have_received(@selector(doNoMath));
+//        });
+//    });
 
 });
 

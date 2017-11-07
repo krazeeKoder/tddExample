@@ -11,19 +11,4 @@
 @implementation MathHelper
 
 
--(NSNumber *)sumArray:(NSArray *)array {
-    if ([array containsObject:@42]) {
-        return @42;
-    }
-    float total = 0;
-    for (NSNumber *number in array) {
-        total += [number floatValue];
-    }
-    return @(total);
-}
-
--(NSString *)doNoMath {
-    return @"No Math";
-}
-
 @end
